@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: monarchpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monarchpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: monarchpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: monarchpipelinesjavascriptdocker 
+          image: myassignmenttwo.azurecr.io/monarchpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
